@@ -1,3 +1,3 @@
 # JS-Components
 
- [**揉捏div**](https://sasa0429.github.io/JS-Components/freeModifyDiv.html)  
+ [**揉捏div**](https://sasa0429.github.io/JS-Components/freeModifyDiv/index.html)  
