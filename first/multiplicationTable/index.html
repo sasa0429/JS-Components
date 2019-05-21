@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>九九乘法表</title>
+    <style>
+        body{
+            margin:0;
+            font-size: 0px;
+        }
+        .wrap{
+            width: 1400px;
+            height:1100px;
+            background: #9280F2;
+            margin: 0 auto;
+            padding-top: 30px;
+        }
+        #box,#reverseBox{
+            background: #dad4fa;
+            width:1200px;
+            height:436px;
+            border-radius: 20px;
+            padding: 30px 0 0 30px;
+            box-sizing: border-box;
+            margin:20px auto;
+            position: relative;
+        }
+        p{
+            color:#fff;
+            font-size: 50px;
+            text-align: center;
+            margin: 0;
+        }
+        div{
+            width:120px;
+            height:40px;
+            line-height: 40px;
+            text-align: center;
+            display: inline-block;
+            font-size: 16px;
+            color: #fff;
+            margin-right: 2px;
+            margin-bottom: 2px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <section class="wrap">
+        <p>九九乘法表</p>
+        <section id="box"></section>
+        <section id="reverseBox"></section>
+    </section>
+    <script>
+        var box=document.getElementById('box');
+        var reverseBox=document.getElementById('reverseBox');
+        var colors=['#78cc64','#58cd7e','#4fcdad','#4cc7dd','#469ee8','#465de8','#5846e8','#8346e8','#9e46e8'];
+        var str="";
+        var txt="";
+        for(var i=1;i<10;i++){
+            for(var j=1;j<=i;j++){
+                str += '<div style="background:'+ colors[i-1] +'">'+ j +' * '+ i +' = '+ j * i +'</div>'
+            }
+           str +='<br/>';
+        }
+        box.innerHTML=str;
+        //倒转
+        
+        for(var k=9;k>0;k--){
+            for(var l=1;l<=k;l++){
+                txt += '<div style="background:'+ colors[k-1] +'">'+ l +' * '+ k +' = '+ l * k +'</div>';
+            }
+            txt +='<br/>';
+        }
+        reverseBox.innerHTML=txt;
+    </script>
+</body>
+</html>
